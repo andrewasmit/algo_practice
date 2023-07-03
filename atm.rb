@@ -26,4 +26,4 @@ def atm int
 end
 
 
-# This is not the full response I gave. Just trying to showcase a bit of my thought prcoess here. I believe I started somewhere close to this and then navigated more through the tests (which I obciously don't have anymore)
+# This is not the full response I gave. Just trying to showcase a bit of my thought prcoess here. I believe I started somewhere close to this and then navigated more through the tests (which I obviously don't have anymore)
