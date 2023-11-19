@@ -5,19 +5,18 @@ function findHighestProfit(arr) {
   let highestProfit = 0;
   let smallestNum = arr[0];
 
-  for (let buy = 0; buy < arr.length - 1; buy++) {
-    if (arr[buy] < smallestNum) {
-      smallestNum = arr[buy];
-    }
-
-    for (let sell = buy + 1; sell < arr.length; sell++) {
-      const currentProfit = arr[sell] - smallestNum;
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] < smallestNum) {
+      smallestNum = arr[i];
+    } else {
+      const currentProfit = arr[i] - smallestNum;
 
       if (currentProfit > highestProfit) {
         highestProfit = currentProfit;
       }
     }
   }
+
   return highestProfit;
 }
 
@@ -27,10 +26,3 @@ console.log(findHighestProfit([3, 5, 1, 6, 7, 2, 9, 2]));
 
 console.log(findHighestProfit([14, 8, 4, 25, 7]));
 // => 21; Buy at 4 and sell at 25
-
-// If we try to do this in onlty one iteration
-// smallestNumToBuy set to first elem
-// iterate through the array one time
-// start the iteration at the second elem
-// on each iteration
-//
